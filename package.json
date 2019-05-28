@@ -3,12 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ionic-native/core": "5.6.1",
+    "@ionic-native/geolocation": "5.6.1",
+    "@ionic/react": "0.0.5",
     "@types/jest": "24.0.13",
     "@types/node": "12.0.3",
-    "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
+    "@types/react-router": "5.0.1",
+    "@types/react-router-dom": "4.3.3",
+    "cordova-android": "7.1.4",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-geolocation": "4.0.1",
+    "cordova-plugin-ionic-keyboard": "2.1.3",
+    "cordova-plugin-ionic-webview": "4.0.1",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-whitelist": "1.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router": "5.0.0",
+    "react-router-dom": "5.0.0",
     "react-scripts": "3.0.1",
     "typescript": "3.4.5"
   },
@@ -16,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ionic:build": "react-scripts build && cp -a build/. www/"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +46,25 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "16.8.19"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-geolocation": {}
+    },
+    "platforms": [
+      "android"
     ]
   }
 }
